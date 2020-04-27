@@ -79,4 +79,21 @@ public class MainController {
         return result;
     }
 
+    @RequestMapping(value = { "/doLogout" }, method = RequestMethod.POST)
+    @ResponseBody
+    public Result doElsething(HttpServletRequest request) {
+
+        Result result = new Result();
+        TestEntity entity = new TestEntity();
+
+        entity.setMap("main");
+        entity.setMain("data");
+
+        result.setCode(0);
+        result.setMsg("success");
+        result.setData(entity);
+
+        return result;
+    }
+
 }
